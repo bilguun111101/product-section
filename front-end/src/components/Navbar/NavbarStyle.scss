@@ -1,0 +1,80 @@
+@import "../styles/variables.scss";
+
+.navbar-section {
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+
+    top: 0%; 
+    left: 0%;
+    right: 0%; 
+    width: 100vw;
+    height: 10vh;
+    padding: $padding;
+    background: $main;
+
+    @include breakpoint(md) {
+        padding: $smallPadding;
+    }
+
+    @include breakpoint(sm) {
+        padding: $phonePadding;
+    }
+
+    &__page-btns {
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        background: $main;
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        &__btns {
+            gap: 1rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__other-btns {
+        gap: 1rem;
+        display: flex;
+        background: $main;
+        align-items: center;
+
+        .language-btns {
+            gap: 0rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .bag-page-btn {
+            padding: .4rem .8rem;
+            border-radius: 1rem;
+            border: 1px solid silver;
+        }
+
+        @include breakpoint(md) {
+            display: flex;
+            position: fixed;
+            background: $main;
+            align-items: center;
+            justify-content: space-around;
+
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            width: 100vw;
+            height: 10vh;
+            padding: $smallPadding;
+        }
+        @include breakpoint(sm) {
+            padding: $phonePadding;
+        }
+    }
+}

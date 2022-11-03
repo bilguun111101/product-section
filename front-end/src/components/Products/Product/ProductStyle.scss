@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.product-section {
+    width: 32%;
+    height: 500px;
+    min-width: 206px;
+    overflow: hidden;
+    border: 1px solid #000;
+
+    @include breakpoint(md) {
+        height: 320px;
+    }
+
+    @include breakpoint(sm) {
+        height: 300px;
+    }
+
+    img {
+        width: 100%;
+    }
+}

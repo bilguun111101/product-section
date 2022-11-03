@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,700;1,400&display=swap');
+
+*, *::before, *::after {
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    background: #FFF;
+}
+
+$main: #FFF;
+$text: #000;
+$padding: 0 90px;
+$smallPadding: 0 30px;
+$phonePadding: 0 10px;
+
+$pagePadding: 10vh 90px;
+$pageSmallPadding: 10vh 30px;
+$paddingPhonePadding: 10vh 30px;
+
+$fontFamily: 'Noticia Text', serif;
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    transition: .2s ease all;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:active {
+    opacity: 0.4;
+}
+
+@mixin breakpoint($size) {
+    @if $size == md {
+        @media (max-width: 900px) {
+            @content
+        }
+    };
+
+    @if $size == sm {
+        @media (max-width: 600px) {
+            @content
+        }
+    }
+}
