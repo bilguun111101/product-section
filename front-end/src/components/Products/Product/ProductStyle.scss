@@ -1,21 +1,73 @@
 @import "../../styles/variables.scss";
 
 .product-section {
-    width: 32%;
-    height: 500px;
-    min-width: 206px;
+    width: 400px;
+    height: 600px;
+    min-width: 190px;
     overflow: hidden;
-    border: 1px solid #000;
 
-    @include breakpoint(md) {
-        height: 320px;
+    @media (max-width: 1232px) {
+        width: 340px;
+        height: 500px;
     }
 
-    @include breakpoint(sm) {
-        height: 300px;
+    @media (max-width: 850px) {
+        width: 300px;
+        height: 430px;
     }
 
-    img {
+    @media (max-width: 540px) {
+        width: 60%;
+        height: 360px;
+    }
+
+    &__image-container {
         width: 100%;
+        height: 90%;
+        overflow: hidden;
+        position: relative;
+
+        &__image-content {
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                transition: .2s ease all;
+            }
+            img:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__document-container {
+        width: 100%;
+        height: 10%;
+        // padding: .5rem 0;
+
+        &__document-content {
+            p {
+                color: grey;
+                // margin-bottom: 1rem;
+                font-size: 100%;
+
+                @media (max-width: 1232px) {
+                }
+            
+                @media (max-width: 850px) {
+                }
+            
+                @media (max-width: 540px) {
+                }
+            }
+        }
     }
 }
