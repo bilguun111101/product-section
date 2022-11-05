@@ -1,0 +1,186 @@
+@import "../styles/variables.scss";
+
+.bag-section {
+    width: 100%;
+    height: 100vh;
+    padding-top: 10vh;
+
+    display: flex;
+    position: relative;
+
+    @include breakpoint(md) {
+        display: block;
+        height: auto;
+    }
+
+    &__contact-information {
+        position: absolute;
+
+        top: 0%;
+        left: 0%;
+        width: 50%;
+        bottom: 0%;
+        height: 100%;
+        padding: $pagePadding;
+        background: #EDEDED;
+
+        @include breakpoint(md) {
+            width: 100%;
+            padding: $pageSmallPadding;
+        }
+    
+        @include breakpoint(sm) {
+            padding: $paddingPhonePadding;
+        }
+
+        &__container {
+            gap: 2rem;
+            width: 100%;
+            height: 100%;
+            padding: 3rem 0;
+
+            @include flex();
+
+            @include breakpoint(md) {
+                padding: 2rem 0;
+            }
+        
+            @include breakpoint(sm) {
+                padding: 1rem 0;
+            }
+
+            .title {
+                font-weight: 300;
+                font-size: 2.4rem;
+
+                @include breakpoint(md) {
+                    font-size: 2.1rem;
+                    text-align: center;
+                }
+            }
+            
+            .email-section {
+                gap: 10px;
+                @include flex();
+
+                &__email-input {
+                    width: 100%;
+                    font-size: 1rem;
+                    padding: .7rem .4rem;
+                    background: $main;
+
+                    border: none;
+                }
+
+                &__check-box {
+                    gap: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    p {
+                        font-size: .8rem;
+                        color: grey;
+                    }
+                }
+            }
+
+            .important-information {
+                gap: 0.8rem;
+                width: 100%;
+                height: auto;
+                @include flex();
+
+                &__register {
+                    gap: 1rem;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    input {
+                        width: 48%;
+                        border: none;
+                        background: $main;
+                        padding: .7rem .4rem;
+                    }
+                    .address-input {
+                        width: 100%;
+                    }
+                }
+                p {
+                    font-size: .8rem;
+                    color: grey;
+                }
+                .black-color-font {
+                    color: #000;
+                }
+
+                &__ship__check-box {
+                    gap: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    p {
+                        display: flex;
+                        color: grey;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    &__Summary-section {
+        position: absolute;
+
+        // top: 0%;
+        right: 0%;
+        width: 50%;
+        bottom: 0%;
+        height: 100%;
+        padding: $pagePadding;
+        background: $main;
+
+        @include breakpoint(md) {
+            width: 100%;
+            padding: $pageSmallPadding;
+        }
+    
+        @include breakpoint(sm) {
+            padding: $paddingPhonePadding;
+        }
+
+        &__container {
+            gap: 2rem;
+            width: 100%;
+            height: 100%;
+            padding: 3rem 0;
+
+            @include flex();
+
+            @include breakpoint(md) {
+                padding: 2rem 0;
+            }
+        
+            @include breakpoint(sm) {
+                padding: 1rem 0;
+            }
+
+
+            .title {
+                font-weight: 300;
+                font-size: 2.4rem;
+
+                @include breakpoint(md) {
+                    font-size: 2.1rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

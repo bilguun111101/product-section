@@ -1,0 +1,188 @@
+@import "../styles/variables.scss";
+
+.detail-section {
+    @include pageSection();
+
+    &__container {
+        gap: 2rem;
+        width: 100%;
+        height: auto;
+        display: flex;
+
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+
+        &__image-section {
+            gap: 1rem;
+            width: 50%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(md) {
+                width: 100%;
+                height: 80vh;
+            }
+
+            .image-container {
+                width: 80%;
+                height: 100%;
+                overflow: hidden;
+
+                @include breakpoint(sm) {
+                    display: flex;
+                    align-items: center;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .choose-image-btns {
+                width: 20%;
+                height: 100%;
+                background: #000;
+
+                &__section {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    overflow: scroll;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+
+        &__document-section {
+            gap: 1rem;
+            width: 50%;
+            height: 70vh;
+            padding: 2rem 0;
+
+            display: flex;
+            flex-direction: column;
+
+            @include breakpoint(md) {
+                width: 100%;
+                padding: 0%;
+                height: auto;
+            }
+
+            &__type {
+                color: gray;
+                font-weight: 400;
+            }
+
+            &__name {
+                font-size: 1.7rem;
+            }
+
+            &__price {
+                font-weight: 400;
+            }
+
+            &__information {
+                gap: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .information-inputs {
+                    gap: 1rem;
+                    width: 100%;
+                    display: flex;
+
+                    .information-input {
+                        gap: 10px;
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .add-btn-section {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    .add-btn {
+                        width: 60%;
+                        color: $main;
+                        padding: 0.6rem 0;
+                        background: $text;
+                        font-size: 1rem;
+                        border-radius: 10px;
+                        transition: .1 ease all;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        &:active {
+                            opacity: 1;
+                            background: #515050;
+                        }
+                    }
+                }
+            }
+
+            &__read-section {
+                gap: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                .read-section-detail {
+                    width: 100%;
+                    height: 50px;
+                    overflow: hidden;
+                    transition: .2s;
+                    // box-shadow: inset 0 3em 3em rgb(255, 255, 255),;
+                }
+
+                .active-read-more {
+                    transition: .2 ease all;
+                    height: auto;
+                }
+
+                .read-more-btn {
+                    width: auto;
+                    border-bottom: 1px solid grey;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &:active {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &__designed-by-section {
+                gap: 1rem;
+                width: 100%;
+                margin-top: 3em;
+                height: auto;
+                display: flex;
+                align-items: center;
+
+                .profile-image-section {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+
+                    display: flex;
+                    overflow: hidden;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
