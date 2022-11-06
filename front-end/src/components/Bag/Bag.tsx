@@ -1,7 +1,9 @@
 import "./BagStyle.scss";
 import React from 'react';
+import Order from "./Build/Order";
 
 const Bag: React.FC = () => {
+    const datas = new Array(20).fill(1);
   return (
     <div className="bag-section">
         <div className="bag-section__contact-information">
@@ -35,19 +37,38 @@ const Bag: React.FC = () => {
                         <p>I have read and accept the&nbsp; <p className="black-color-font">term & conditions</p></p>
                     </div>
                 </div>
-
             </div>
         </div>
 
-        {/* <div className="bag-section__Summary-section">
+        <div className="bag-section__Summary-section">
             <div className="bag-section__Summary-section__container">
                 <h1 className="title">Summary</h1>
                 <div className="orders-section">
                     <h3 className="orders-section__title">Product</h3>
-                    <div className="products-section"></div>
+                    <div className="orders-section__products-section">
+                        {datas?.map((el, idx) => <Order key={idx} />)}
+                    </div>
+                </div>
+                <div className="bag-section__Summary-section__container__shipping">
+                    <p>Shipping: </p>
+                    <p>USD 18.00</p>
+                </div>
+                <div className="bag-section__Summary-section__container__shipping">
+                    <p>Estimated taxes: </p>
+                    <p>USD 560.00</p>
+                </div>
+                <div className="bag-section__Summary-section__container__shipping">
+                    <h3>Subtotal: </h3>
+                    <h3>USD 1800.00</h3>
+                </div>
+                <div className="bag-section__Summary-section__container__continue-to-payment-section">
+                    <button>Continue to payment</button>
+                    <div>
+                        <p>Secure payment via Stripe</p>
+                    </div>
                 </div>
             </div>
-        </div> */}
+        </div>
     </div>
   )
 }
