@@ -1,17 +1,7 @@
 @import "../styles/variables.scss";
 
 .products-section {
-    width: 100vw;
-    height: auto;
-    padding: $pagePadding;
-
-    @include breakpoint(md) {
-        padding: $pageSmallPadding;
-    }
-
-    @include breakpoint(sm) {
-        padding: $paddingPhonePadding;
-    }
+    @include pageSection();
 
     &__amount {
         width: 100%;

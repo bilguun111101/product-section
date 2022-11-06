@@ -4,7 +4,7 @@ import "./LoadingStyle.scss";
 const Loading: React.FC = () => {
   return (
     <div className='loading-section'>
-    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
   )
 }

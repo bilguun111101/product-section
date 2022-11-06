@@ -6,21 +6,30 @@
     outline: none;
     list-style: none;
     box-sizing: border-box;
-    background: #FFF;
+    background: transparent;
 }
 
+// color *******
 $main: #FFF;
 $text: #000;
+
+
+// padding section ********
 $padding: 0 90px;
 $smallPadding: 0 30px;
 $phonePadding: 0 10px;
 
+
+// phone padding ***********
 $pagePadding: 10vh 90px;
 $pageSmallPadding: 10vh 30px;
 $paddingPhonePadding: 10vh 30px;
 
+
+// font section (((((()))))))
 $fontFamily: 'Noticia Text', serif;
 
+// elements ---------------------
 button {
     border: none;
     cursor: pointer;
@@ -28,14 +37,8 @@ button {
     transition: .2s ease all;
 }
 
-button:hover {
-    opacity: 0.7;
-}
 
-button:active {
-    opacity: 0.4;
-}
-
+// breakpoints ************
 @mixin breakpoint($size) {
     @if $size == md {
         @media (max-width: 900px) {
@@ -48,4 +51,28 @@ button:active {
             @content
         }
     }
+};
+
+
+
+// some functions
+@mixin pageSection {
+    width: 100vw;
+    height: auto;
+
+    padding: $pagePadding;
+
+    @include breakpoint(md) {
+        padding: $pageSmallPadding;
+    }
+
+    @include breakpoint(sm) {
+        padding: $paddingPhonePadding;
+    }
+}
+
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
 }
